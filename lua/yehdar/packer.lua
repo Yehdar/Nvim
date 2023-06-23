@@ -8,19 +8,16 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-  'nvim-telescope/telescope.nvim', tag = '0.1.1',
--- or                            , branch = '0.1.x',
-  requires = { {'nvim-lua/plenary.nvim'} }
-}
+  'nvim-telescope/telescope.nvim', 
+  requires = { 'nvim-lua/plenary.nvim' }
+  }
 
-use ({ 
-	"catppuccin/nvim",
-	as = "catppuccin",
-	config = function()
-		vim.cmd('colorscheme catppuccin-mocha')
-	end
-	})
-
+  use{ 
+  "catppuccin/nvim",
+  config = function()
+  vim.cmd('colorscheme catppuccin-mocha')
+  end
+  }
 
 
 end)
